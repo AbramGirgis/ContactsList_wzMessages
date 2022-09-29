@@ -14,9 +14,9 @@ public class Message {
     }
 
     // A method to display a message details
-    public void getDetails(){
+    public void getDetails() {
         System.out.println("Contact Name: " + recipient +
-                "\nMessage: " + text + ""+
+                "\nMessage: " + text + "" +
                 "\nId: " + id);
     }
 

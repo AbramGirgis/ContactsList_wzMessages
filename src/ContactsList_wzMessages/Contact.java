@@ -16,6 +16,7 @@ public class Contact {
         this.email = email;
         this.messages = messages;
     }
+
     // Another constructor for a new contact who still have no messages related to him
     public Contact(String name, String number, String email) {
         this.name = name;
@@ -24,12 +25,12 @@ public class Contact {
         this.messages = new ArrayList<>();
     }
 
-// A method to display the contact details
-   public void getDetails(){
-       System.out.println("Name: " + this.name + "" +
-               "\nNumber: " + this.number + ""+
-               "\nEmail: " + this.email);
-   }
+    // A method to display the contact details
+    public void getDetails() {
+        System.out.println("Name: " + this.name + "" +
+                "\nNumber: " + this.number + "" +
+                "\nEmail: " + this.email);
+    }
 
     // getters & setters
     public String getName() {
