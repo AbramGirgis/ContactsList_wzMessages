@@ -24,7 +24,12 @@ public class Contact {
         this.messages = new ArrayList<>();
     }
 
-
+// A method to display the contact details
+   public void getDetails(){
+       System.out.println("Name: " + this.name + "" +
+               "\nNumber: " + this.number + ""+
+               "\nEmail: " + this.email);
+   }
 
     // getters & setters
     public String getName() {

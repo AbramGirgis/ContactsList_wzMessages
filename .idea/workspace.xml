@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8737f664-09de-4f9f-a51f-464b35b8791c" name="Changes" comment="Contact class">
+    <list default="true" id="8737f664-09de-4f9f-a51f-464b35b8791c" name="Changes" comment="Contact class modification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ContactsList_wzMessages/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContactsList_wzMessages/Contact.java" afterDir="false" />
     </list>
@@ -45,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664423289765</updated>
-      <workItem from="1664423293627" duration="1989000" />
+      <workItem from="1664423293627" duration="2196000" />
     </task>
     <task id="LOCAL-00001" summary="Message class completed">
       <created>1664424678722</created>
@@ -54,7 +54,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664424678722</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Contact class modification">
+      <created>1664425456794</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664425456794</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,6 +81,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Message class completed" />
     <MESSAGE value="Contact class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Contact class" />
+    <MESSAGE value="Contact class modification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Contact class modification" />
   </component>
 </project>
