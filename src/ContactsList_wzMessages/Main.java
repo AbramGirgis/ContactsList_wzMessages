@@ -40,7 +40,7 @@ public class Main {
                 "\n\t1. Manage Contacts" +
                 "\n\t2. Messages" +
                 "\n\t3. Quit");
-
+        System.out.print("Choice: ");
         scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         switch (choice) {
@@ -52,7 +52,6 @@ public class Main {
                 break;
             default:
                 break;
-
         }
     }
 
@@ -63,7 +62,7 @@ public class Main {
                 "\n\t3. Search for a contact" +
                 "\n\t4. Delete a contact" +
                 "\n\t5. Back to the previous menu");
-
+        System.out.print("Choice: ");
         int choice = scanner.nextInt();
         switch (choice) {
             case 1:
@@ -86,13 +85,13 @@ public class Main {
     }
 
     private static void showAllContacts() {
-        if (contacts.size()>0){
+        if (contacts.size() > 0) {
             for (Contact c : contacts) {
                 c.getDetails();
                 System.out.println("*****************");
             }
-        }else {
-            System.out.println("You have 0 contacts!");
+        } else {
+            System.out.println("You have 0 contacts!" + "\n");
         }
         showInitialOptions();
     }
@@ -106,7 +105,7 @@ public class Main {
         System.out.println("Please enter the contact's email:");
         String email = scanner.next();
 
-        if (name.equals("") | number.equals("") | email.equals("")) {
+        if (name.equals("") || number.equals("") || email.equals("")) {
             System.out.println("Please enter all of the contact required information.");
             addNewContact();
         } else {
@@ -122,7 +121,7 @@ public class Main {
             } else {
                 Contact contact = new Contact(name, number, email);
                 contacts.add(contact);
-                System.out.println(name + " is added successfully.");
+                System.out.println(name + " is added successfully." + "\n");
             }
         }
         showInitialOptions();
@@ -141,10 +140,11 @@ public class Main {
                 if (c.getName().equals(name)) {
                     doesExist = true;
                     c.getDetails();
+                    System.out.println();
                 }
             }
             if (!doesExist) {
-                System.out.println("Contact is not found in your contacts list!");
+                System.out.println("Contact is not found in your contacts list!" + "\n");
             }
         }
         showInitialOptions();
@@ -158,15 +158,18 @@ public class Main {
             deleteContact();
         } else {
             boolean doesExist = false;
+            Contact contactToDelete = null;
             for (Contact c : contacts) {
                 if (c.getName().equals(name)) {
                     doesExist = true;
-                    contacts.remove(c);
-                    System.out.println("Contact is deleted successfully!");
+                    contactToDelete = c;
                 }
             }
-            if (!doesExist) {
-                System.out.println("Contact is not found in your contacts list!");
+            if (doesExist) {
+                contacts.remove(contactToDelete);
+                System.out.println("Contact is deleted successfully!" + "\n");
+            } else {
+                System.out.println("Contact is not found in your contacts list!" + "\n");
             }
         }
         showInitialOptions();
@@ -178,7 +181,7 @@ public class Main {
                 "\n\t1. Show all messages" +
                 "\n\t2. Send a new message" +
                 "\n\t3. Back to the previous menu");
-
+        System.out.print("Choice: ");
         int choice = scanner.nextInt();
         switch (choice) {
             case 1:
@@ -205,7 +208,7 @@ public class Main {
                 System.out.println("****************");
             }
         } else {
-            System.out.println("There are no messages to show!");
+            System.out.println("There are no messages to show!" + "\n");
         }
 
         showInitialOptions();
@@ -226,24 +229,26 @@ public class Main {
                 }
             }
             if (doesExist) {
+                scanner.nextLine();
                 System.out.println("Write your message:");
-                String text = scanner.next();
+                String text = scanner.nextLine();
                 if (text.equals("")) {
                     System.out.println("You did not write anything!");
                     sendNewMessage();
                 } else {
                     id++;
                     Message newMessage = new Message(text, name, id);
-                    for (Contact c : contacts){
-                        if (c.getName().equals(name)){
+                    for (Contact c : contacts) {
+                        if (c.getName().equals(name)) {
                             ArrayList<Message> newMessages = c.getMessages();
                             newMessages.add(newMessage);
                             c.setMessages(newMessages);
+                            System.out.println("Message is sent!" + "\n");
                         }
                     }
                 }
             } else {
-                System.out.println("Contact does not exist in your contacts list!");
+                System.out.println("Contact does not exist in your contacts list!" + "\n");
             }
         }
         showInitialOptions();
